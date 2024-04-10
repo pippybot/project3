@@ -35,3 +35,203 @@ nav ul {
 nav li {
 	float: left; /* Make list items float left to create a horizontal layout */
 }
+
+nav li a {
+	display: block;
+	color: white; /* Text Color */
+	text-align: center;
+	padding: 14px 16px; /* Padding for each navigation item */
+	text-decoration: none;
+}
+
+/* Change appearance of links on hover */
+nav li a:hover {
+	background-color: #ddd; /* Background color on hover */
+	color: black; /* Text color on hover */
+}
+
+/* Body CSS */
+#about-info {
+  background-image: url("../images/gradient_back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  flex: 1;
+}
+
+#personal-and-contact p {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#personal-and-contact h1, h2 {
+	text-align: center;
+	font-size: larger;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
+#main-info {
+  font-family: 'Times New Roman', Times, serif;
+  width: 90%;
+  margin: 0 auto;
+  background-color: 0;
+  border: 0.1em solid;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1%;
+}
+
+#main-info h2 {
+  font-size: large;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+#main-info ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+}
+
+#main-info ol li {
+  position: relative;
+  right: 50%;
+  font-size: large;
+}
+
+/* Other section CSS */
+#workhistory ol,
+#certificates ol,
+#awards ol,
+#leadership ol,
+#volunteerwork ol,
+#skills ol,
+#languages ol,
+#hobbies_interests ol {
+  list-style-type: circle;
+}
+
+ul li {
+  font-size: small;
+}
+
+/* Other section styling */
+#fun-facts,
+#gaming,
+#tattoos {
+  border: 0.1em black;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#gaming iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+}
+
+#tattoos img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  max-width: 100%;
+  height: auto;
+}
+
+#main-about {
+	background-image: url("../images/tech_image.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	flex: 1;
+}
+
+#main-about h1, p {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 1em;
+	font-family: "KBQuietStories", arial, sans-serif;
+	background-color: white;
+}
+
+#main-dog {
+	background-image: url("../images/outdoor_back.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	flex: 1;
+}
+
+#loki h1, p {
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 1em;
+	font-family: "KBQuietStories", arial, sans-serif;
+	background-color: white;
+}
+
+#loki img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 8px;
+	border: 2px solid black;
+	max-width: 100%;
+	height: auto;
+}
+
+#bailey h1, p {
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 1em;
+	font-family: "KBQuietStories", arial, sans-serif;
+	background-color: white;
+}
+
+#bailey img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 8px;
+	border: 2px solid black;
+	max-width: 100%;
+	height: auto;
+}
+
+#izzy h1, p {
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 1em;
+	font-family: "KBQuietStories", arial, sans-serif;
+	background-color: white;
+}
+
+#izzy img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 8px;
+	border: 2px solid black;
+	max-width: 100%;
+	height: auto;
+}
+
+#three-dogateers h1, p {
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 1em;
+	font-family: "KBQuietStories", arial, sans-serif;
+	background-color: white;
+}
+
+#three-dogateers img {
+	display: block;
+	margin: 0 auto;
+	border-radius: 8px;
+	border: 2px solid black;
+	max-width: 100%;
+	height: auto;
+}
