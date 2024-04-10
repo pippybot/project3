@@ -52,26 +52,6 @@ nav li a:hover {
   margin: 30px auto;
 }
 
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 5px 0;
-  text-align: center;
-  clear: both;
-}
-
-footer p {
-  margin: 0;
-}
-
-footer a {
-  color: #ffffff; /* Set link color to white */
-}
-
-footer address {
-  margin-top: 10px;
-}
-
 /* Style for Google Maps Info Window */
 .gm-style-iw {
     color: #000; /* Set text color to black */
