@@ -168,6 +168,13 @@ ul li {
 	flex: 1;
 }
 
+
+@media only screen and (min-width: 800px) { 
+/* Media Query for Screens Larger Than 800px */
+  #main-dog {
+    padding: 40px;
+  }
+
 #loki h1, p {
 	text-align: left;
 	margin-top: 10px;
