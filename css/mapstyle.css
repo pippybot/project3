@@ -1,0 +1,78 @@
+/* Map Page Specific Styles */
+
+body {
+  font-family: "KBQuietStories", Times, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #292929;
+  color: #fff;
+}
+
+/* Navigation CSS */
+nav {
+	background-color: #333; /*Background Color of nav bar */
+	overflow: hidden; /* Remove default list style */
+	margin: 0;
+	padding: 0; 
+}
+
+nav ul {
+	list-style-type: none; /* Make list items float left to create horizontal layout */
+}
+
+nav li {
+	float: left; /* Make list items float left to create a horizontal layout */
+}
+
+nav li a {
+	display: block;
+	color: white; /* Text Color */
+	text-align: center;
+	padding: 14px 16px; /* Padding for each navigation item */
+	text-decoration: none;
+}
+
+/* Change appearance of links on hover */
+nav li a:hover {
+	background-color: #ddd; /* Background color on hover */
+	color: black; /* Text color on hover */
+
+#wrapper {
+  width: 850px;
+  height: 600px;
+  background-color: #e8e8fb;
+  margin:0 auto;
+  overflow: hidden;
+}
+
+#canvas {
+  width: 700px;
+  height: 500px;
+  background-color: #CCCCFF;
+  margin: 30px auto;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 0;
+  text-align: center;
+  clear: both;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #ffffff; /* Set link color to white */
+}
+
+footer address {
+  margin-top: 10px;
+}
+
+/* Style for Google Maps Info Window */
+.gm-style-iw {
+    color: #000; /* Set text color to black */
+}
