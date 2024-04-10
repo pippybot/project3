@@ -1,0 +1,37 @@
+/* Text CSS */
+p {
+  font-size: 1.2em;
+  font-family: "KBQuietStories", Times, sans-serif;
+  margin-bottom: 1em;
+  padding: 0.1em;
+}
+
+h1, h2, li {
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 1em;
+  padding: 0.1em;
+}
+
+#resume-header {
+  padding: 1em;
+  background-color: #333;
+  border-radius: 1em;
+  font-size: 2em;
+  color: white;
+}
+
+/* Navigation CSS */
+nav {
+	background-color: #333; /*Background Color of nav bar */
+	overflow: hidden; /* Remove default list style */
+	margin: 0;
+	padding: 0; 
+}
+
+nav ul {
+	list-style-type: none; /* Make list items float left to create horizontal layout */
+}
+
+nav li {
+	float: left; /* Make list items float left to create a horizontal layout */
+}
