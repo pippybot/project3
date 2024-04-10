@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<title>Map</title>
 	<link href="https://fonts.cdnfonts.com/css/kbquietstories" rel="stylesheet">
  	<link rel="stylesheet" type="text/css" href="css/normalize.css">
   	<link rel="stylesheet" type="text/css" href="css/mapstyle.css">
-</head>
-<body>
-	<div id= "map"></div>
-	<script>
-		var map;
-		function initMap() {
-			map = new google.maps.Map(document.getElementById('map'), {
-				center: {lat: -41.83380694415314, lng: -87.62611786373115},
-				zoom: 8
-			});
-		}
-	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFbBn9_XSkyH3MzTxYkrzKWm9BYxZkIjc&loading=async&callback=initMap"></script>
 	<script src="js/map.js"></script>
+</head>
+<body>
   <header>
     <nav>
       <ul>
