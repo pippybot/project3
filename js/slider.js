@@ -1,28 +1,33 @@
-// Initialize slideIndex to start with the first image
-var slideIndex = 0;
+let slideIndex = 0;
+const slide = document.getElementById('slide');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const images = [
+    'images/NerdyHallows.jpg',
+    'images/halfsleeve.jpg,
+]
 
-// Function to change slides
-function changeSlide(n) {
-  showSlide(slideIndex += n);
+function prevSlide() {
+
+    slideIndex = slideIndex - 1;
+    if (slideIndex < 0) {
+
+        slideIndex = images.length - 1;
+    }
+
+    slide.src = images[slideIndex];
 }
 
-// Function to display the current slide
-function showSlide(n) {
-  var slides = document.getElementsByClassName("slider-image");
-  if (n >= slides.length) { 
-    slideIndex = 0; // If at end of slides, start from the beginning
-  }
-  if (n < 0) { 
-    slideIndex = slides.length - 1; // If at beginning, go to the end
-  }
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none"; // Hide all slides
-  }
-  slides[slideIndex].style.display = "block"; // Display the current slide
+function nextSlide() {
+
+    slideIndex = slideIndex + 1;
+    if (slideIndex >= images.length) {
+
+        slideIndex = 0;
+    }
+
+    slide.src = images[slideIndex];
 }
 
-// Call the showSlide function to display the initial slide
-showSlide(slideIndex);
-
-// Display the initial slide when the page loads
-changeSlide(0);
+prevBtn.addEventListener('click', prevSlide);
+nextBtn.addEventListener('click', nextSlide);
