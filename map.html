@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Map</title>
-	<link href="https://fonts.cdnfonts.com/css/kbquietstories" rel="stylesheet">
- 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
-  	<link rel="stylesheet" type="text/css" href="css/mapstyle.css">
-	
+    <meta charset="UTF-8">
+    <title>Map</title>
+    <link href="https://fonts.cdnfonts.com/css/kbquietstories" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/mapstyle.css">
+
 </script>
 </head>
 <body>
@@ -21,19 +21,19 @@
     </nav>
   </header>
   <div id="wrapper">
-    <div id="googleMap" style="width:100%;height:400px"></div>
-		
-	<script>
-		function initMap() {
-			var mapProperties= {
-				center:new google.maps.LatLng(51.508742, -0.120850),
-				zoom:5;
-		};
-		var map = new google.maps.Map(document.getElementById("googleMap"),mapProperties);
-		}
-	</script>
+    <div id="googleMap" style="width:100%;height:400px;"></div>
 
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFbBn9_XSkyH3MzTxYkrzKWm9BYxZkIjc&loading=async&callback=initMap"></script>
+<script>
+function initMap() {
+var mapProperties= {
+  center:new google.maps.LatLng(51.508742,-0.120850),
+  zoom:5,
+};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProperties);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCLmTWn8ew8TFTAmArDnZX4vNWqYA-xDJc&callback=initMap"></script>
   </div>
 </body>
 </html>
