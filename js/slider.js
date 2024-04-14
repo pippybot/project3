@@ -4,7 +4,7 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const images = [
     'images/NerdyHallows.jpg',
-    'images/halfsleeve.jpg,
+    'images/halfsleeve.jpg',
 ]
 
 function prevSlide() {
