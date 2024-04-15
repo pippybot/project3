@@ -1,4 +1,29 @@
 var map;
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('googleMap'), {
+            center: {lat: 41.83409469359984, lng: -87.62625439108541}, 
+            zoom: 25,
+            mapID: 'Rowe_Village_ID',
+        });
+        
+        new google.maps.Marker({
+            position: {lat: 41.83409469359984, lng: -87.62625439108541},
+            map,
+            animation: google.maps.Animation.BOUNCE,
+            icon: {
+                url: 'images/lokiHype.PNG',
+                scaledSize: new google.maps.Size(50,50)
+            }
+        });
+  
+        // Add  an event  listener to the change location button
+        document.getElementById('changeLocButton').addEventListener('click', changeLocation);
+    }
+      // Call the 'map.js' file to allow for the buttons to function
+      <script src="js/map.js">
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFbBn9_XSkyH3MzTxYkrzKWm9BYxZkIjc&loading=async&callback=initMap"></script>
+
 var marker;
 const fortworth = {lat: 32.75361817256558, lng: -97.31959193117723};
 const uk = {lat: 55.20928090114521, lng: -2.8708931416767762};
