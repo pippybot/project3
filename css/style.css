@@ -168,8 +168,12 @@ ul li {
 }
 
 .slideshow-images img {
-	margin-left: 1em;
-	margin-right: 1em;
+	display: block;
+	margin: 0 auto;
+	border-radius: 8px;
+	border: 2px solid black;
+	max-width: 100%;
+	height: auto;
 }
 
 #prevBtn:hover, #nextBtn:hover {
