@@ -25,11 +25,21 @@
 
 <script>
 function initMap() {
-var mapProperties= {
-  center:new google.maps.LatLng(51.508742,-0.120850),
-  zoom:5,
-};
-var map = new google.maps.Map(document.getElementById("googleMap"),mapProperties);
+    const map = new google.maps.Map(document.getElementById('googleMap'), {
+        center: {lat: 51.508742, lng: -0.120850},
+        zoom: 5,
+        mapID: 'Rowe_Village_ID',
+    });
+    
+    new google.maps.Marker({
+        position: {lat: 51.508742, lng: -0.120850},
+        map,
+        animation: google.maps.Animation.BOUNCE,
+        icon: {
+            url: 'images/lokiHype.PNG',
+            scaledSize: new google.maps.Size(50,50)
+        }
+    });
 }
 </script>
 
