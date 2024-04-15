@@ -56,3 +56,59 @@ nav li a:hover {
 .gm-style-iw {
     color: #000; /* Set text color to black */
 }
+
+/* Maps section */
+.maps-section {
+	box-shadow: 0em 0em 2em rgb (0, 0, 0);
+}
+
+#googleMap {
+	height: 35em;
+	width: 100%;
+	display: inline-block;
+}
+
+.button {
+	width: 12em;
+	height: 6em;
+	background-color: rgb(0, 0, 0);
+	color: white;
+	text-alighn: center;
+	line-height: 6em;
+	margin-left: 3em;
+	margin-right: 3em;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	display: inline-block;
+	border-redius: 1em;
+}
+
+.button:hover {
+	background-color: #000000;
+}
+
+/* Button Section CSS */
+section {
+	background-color: #000000;
+	padding: 1.5em;
+	border-radius:1em;
+	box-shadow: 0.5em, 0.5em, 2em, rgba(0, 0, 0, 0.7);
+	margin: 3em auto;
+	max-width: 70rem;
+}
+
+#prevBtn, #nextBtn {
+    width: 12em;
+    height: 6em;
+    background-color: rgb(187, 127, 214);
+    color: white;
+    text-align: center;
+    line-height: 6em;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 30%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: inline-block;
+    border-radius: 1em;
+  }
