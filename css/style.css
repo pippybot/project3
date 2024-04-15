@@ -50,7 +50,7 @@ nav li a:hover {
 	color: black; /* Text color on hover */
 }
 
-/* Body CSS */
+/* Resume Body CSS */
 #about-info {
   background-image: url("../images/gradient_back.jpg");
   background-repeat: no-repeat;
@@ -103,7 +103,7 @@ nav li a:hover {
   font-size: large;
 }
 
-/* Other section CSS */
+/* Resume Other section CSS */
 #workhistory ol,
 #certificates ol,
 #awards ol,
@@ -119,7 +119,7 @@ ul li {
   font-size: small;
 }
 
-/* Other section styling */
+/* Index section styling */
 #fun-facts,
 #gaming,
 #tattoos {
@@ -150,6 +150,34 @@ ul li {
 	font-family: "KBQuietStories", arial, sans-serif;
 	background-color: white;
 }
+
+.tattoos {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.slideshow {
+	flex: 1;
+}
+
+.slideshow-images {
+	display: flex;
+	justify-content: center;
+}
+
+.slideshow-images img {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+	background-color: #CCCCFF;
+}
+
+
+/* Dogs Page CSS */
 
 #main-dog {
 	background-image: url("../images/outdoor_back.jpg");
