@@ -6,7 +6,7 @@ function initMap() {
         zoom: 17,
         mapID: 'Rowe_Village_ID',
     });
-}  
+    
     new google.maps.Marker({
         position: {lat: 41.83409469359984, lng: -87.62625439108541},
         map,
