@@ -1,61 +1,47 @@
 var map;
-var infoWindow;
-var currentLocation = 'Rowe Village';
-var trafficLayer;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('googleMap'), {
-        center: { lat: 41.83409469359984, lng: -87.62625439108541 },  // Rowe Village coordinates
-        zoom: 15  // Adjusted zoom for better initial view
+        center: {lat: 41.83409469359984, lng: -87.62625439108541}, 
+        zoom: 25,
+        mapID: 'Rowe_Village_ID',
+    });
+    
+    new google.maps.Marker({
+        position: {lat: 41.83409469359984, lng: -87.62625439108541},
+        map,
+        animation: google.maps.Animation.BOUNCE,
+        icon: {
+            url: 'images/lokiHype.PNG',
+            scaledSize: new google.maps.Size(50,50)
+        }
     });
 
-    trafficLayer = new google.maps.TrafficLayer();
-
-    // Markers for different locations
-    var markers = {
-        'UK': new google.maps.Marker({
-            position: { lat: 55.391223530439646, lng: -2.591264406992628 },
-            map,
-            title: 'UK'
-        }),
-        'Fort Worth': new google.maps.Marker({
-            position: { lat: 32.75361817256558, lng: -97.31959193117723 },
-            map,
-            title: 'Fort Worth'
-        }),
-        'Rowe Village': new google.maps.Marker({
-            position: { lat: 41.83409469359984, lng: -87.62625439108541 },
-            map,
-            title: 'Rowe Village',
-            animation: google.maps.Animation.DROP
-        })
-    };
-
-    // Info window for markers
-    infoWindow = new google.maps.InfoWindow();
-
-    document.getElementById('changeLocButton').addEventListener('click', function() {
-        changeLocation();
-    });
-
-    document.getElementById('showLayerButton').addEventListener('click', function() {
-        toggleLayers();
-    });
-
-    document.getElementById('showInfoButton').addEventListener('click', function() {
-        showInfo(markers[currentLocation]);
-    });
+    // Add an event listener to the change location button
+    document.getElementById('changeLocButton').addEventListener('click', changeLocation);
 }
 
+// Marker added for UK 
 function changeLocation() {
-    if (currentLocation === 'Fort Worth') {
-        map.setCenter({ lat: 55.391223530439646, lng: -2.591264406992628 });
-        currentLocation = 'UK';
-    } else {
-        map.setCenter({ lat: 32.75361817256558, lng: -97.31959193117723 });
-        currentLocation = 'Fort Worth';
-    }
+   // Defining coordinates
+   const newLocation = {lat: 55.391223530439646, lng: -2.591264406992628};
+
+    //Set  map's  center to new  location
+    map.setCenter(newLocation);
 }
+ 
+    // Marker added for FortWorth
+    function changeLocation() {
+        // Defining coordinates
+        const newLocation = {lat: 32.75361817256558, lng: -97.31959193117723};
+
+    //Set  map's  center to new  location
+    map.setCenter(newLocation);
+}
+
+
+// Defining the layers
+trafficLayer = new google.maps.TrafficLayer();
 
 function toggleLayers() {
     if (trafficLayer.getMap()) {
@@ -65,6 +51,23 @@ function toggleLayers() {
     }
 }
 
+// Info window for markers
+infoWindow = new google.maps.InfoWindow();
+
+document.getElementById('changeLocButton').addEventListener('click', function() {
+    changeLocation();
+});
+
+document.getElementById('showLayerButton').addEventListener('click', function() {
+    toggleLayers();
+});
+
+document.getElementById('showInfoButton').addEventListener('click', function() {
+    showInfo(markers[currentLocation]);
+});
+}
+
+// Info for the Info Windows
 function showInfo(marker) {
     var contentString = '';
     if (marker.title === 'UK') {
