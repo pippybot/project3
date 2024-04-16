@@ -71,8 +71,8 @@ nav li a:hover {
 .button {
 	width: 12em;
 	height: 6em;
-	background-color: rgb(0, 0, 0);
-	color: black;
+	background-color: black;
+	text-color: white;
 	text-alighn: center;
 	line-height: 6em;
 	margin-left: 3em;
@@ -84,7 +84,7 @@ nav li a:hover {
 }
 
 .button:hover {
-	background-color: #000000;
+	background-color: #ffffff;
 }
 
 /* Button Section CSS */
