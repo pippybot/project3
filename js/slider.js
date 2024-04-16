@@ -1,33 +1,28 @@
-let slideIndex = 0;
-const slide = document.getElementById('slide');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const images = [
-    'images/NerdyHallows.jpg',
-    'images/halfsleeve.jpg',
-]
+document.addEventListener("DOMContentLoaded", function() {
+    const slideshowImages = ['images/NerdyHallows.jpg', 'images/halfsleeve.jpg'];
+    let currentIndex = 0;
 
-function prevSlide() {
+    const imageElement = document.getElementById('slider-image');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
 
-    slideIndex = slideIndex - 1;
-    if (slideIndex < 0) {
+    prevBtn.addEventListener('click', function() {
+        currentIndex--;
+        if (currentIndex < 0) {
+            currentIndex = images.length - 1;
+        }
+        updateImage();
+    });
 
-        slideIndex = images.length - 1;
+    nextBtn.addEventListener('click', function() {
+        currentIndex++;
+        if (currentIndex >= images.length) {
+            currentIndex = 0;
+        }
+        updateImage();
+    });
+
+    function updateImage() {
+        imageElement.src = images[currentIndex];
     }
-
-    slide.src = images[slideIndex];
-}
-
-function nextSlide() {
-
-    slideIndex = slideIndex + 1;
-    if (slideIndex >= images.length) {
-
-        slideIndex = 0;
-    }
-
-    slide.src = images[slideIndex];
-}
-
-prevBtn.addEventListener('click', prevSlide);
-nextBtn.addEventListener('click', nextSlide);
+});
