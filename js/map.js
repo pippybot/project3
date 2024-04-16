@@ -6,7 +6,8 @@ function initMap() {
         zoom: 17,
         mapID: 'Rowe_Village_ID',
     });
-    
+
+    // Marker for Dorm
     new google.maps.Marker({
         position: {lat: 41.83409469359984, lng: -87.62625439108541},
         map,
@@ -17,6 +18,7 @@ function initMap() {
         }
     });
 
+    // Marker for the UK
     new google.maps.Marker({
         position: {lat: 55.954184778757956, lng: -3.1867993233814462},
         map,
@@ -27,6 +29,7 @@ function initMap() {
         }
     });
 
+    // Marker for Fort Worth
     new google.maps.Marker({
         position: {lat: 32.74120577120599, lng: -97.36894587494513},
         map,
