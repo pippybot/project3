@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (currentIndex >= images.length) {
             currentIndex = 0;
         }
-        updateImage();
+        updateslideshowImages();
     });
 
     function updateImage() {
-        imageElement.src = images[currentIndex];
+        imageElement.src = slideshowImages[currentIndex];
     }
 });
