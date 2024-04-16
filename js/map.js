@@ -33,7 +33,7 @@ function changeLocation() {
     // Marker added for FortWorth
     function changeLocation() {
         // Defining coordinates
-        const newLocation = {lat: 32.75361817256558, lng: -97.31959193117723};
+        const newLocation = {lat: 32.74120577120599, lng: -97.36894587494513}; 
 
     //Set  map's  center to new  location
     map.setCenter(newLocation);
@@ -56,6 +56,8 @@ function setUpButtons() {
     var infoButton = createButton("infoButton", "Show Alert", function() {
         alert("This is the dorm that I stayed in when I was living on campus during the Fall 2023 semester!");
     });
+
+    
 }
     
 
