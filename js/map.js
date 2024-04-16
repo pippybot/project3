@@ -39,44 +39,13 @@ function changeLocation() {
     map.setCenter(newLocation);
 }
 
-
 // Defining the layers
-trafficLayer = new google.maps.TrafficLayer();
+function layers() {
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 13,
+    center: { lat: 34.04924594193164, lng: -118.24104309082031 },
+  });
+  const trafficLayer = new google.maps.TrafficLayer();
 
-function toggleLayers() {
-    if (trafficLayer.getMap()) {
-        trafficLayer.setMap(null);
-    } else {
-        trafficLayer.setMap(map);
-    }
-}
-
-// Info window for markers
-infoWindow = new google.maps.InfoWindow();
-
-document.getElementById('changeLocButton').addEventListener('click', function() {
-    changeLocation();
-});
-
-document.getElementById('showLayerButton').addEventListener('click', function() {
-    toggleLayers();
-});
-
-document.getElementById('showInfoButton').addEventListener('click', function() {
-    showInfo(markers[currentLocation]);
-});
-}
-
-// Info for the Info Windows
-function showInfo(marker) {
-    var contentString = '';
-    if (marker.title === 'UK') {
-        contentString = 'I went to the UK last in Summer of 2023 with my grandmother and my brother.';
-    } else if (marker.title === 'Fort Worth') {
-        contentString = 'This year for my birthday, I am going to a big gaming event for Rocket League.';
-    } else if (marker.title === 'Rowe Village') {
-        contentString = 'When I was studying on campus during the Fall 2023 semester, this is the dorm I stayed at.';
-    }
-    infoWindow.setContent(contentString);
-    infoWindow.open(map, marker);
+  trafficLayer.setMap(map);
 }
