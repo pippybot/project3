@@ -169,7 +169,7 @@ ul li {
     	display: block; /* to avoid bottom margin/gap */
 }
 
-.slideshow-images img {
+.slider-image img {
 	display: block;
 	margin: 0 auto;
 	border-radius: 8px;
