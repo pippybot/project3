@@ -24,7 +24,7 @@ function initMap() {
     });
 
     new google.maps.Marker({
-        position: {lat: 55.954184778757956, lng: -3.1867993233814462};
+        position: {lat: 55.954184778757956, lng: -3.1867993233814462},
         UK,
         animation: google.maps.Animation.BOUNCE,
         icon: {
