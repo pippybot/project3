@@ -1,4 +1,8 @@
 var map;
+var layers = 0;
+var transit;
+var traffic;
+var bike; 
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('googleMap'), {
@@ -105,13 +109,20 @@ function changeInformation() {
 }
     
 
-// Defining the layers
-function layers() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 17,
-    center: { lat: 34.04924594193164, lng: -118.24104309082031 },
-  });
-  const trafficLayer = new google.maps.TrafficLayer();
+function showLayers() {
 
-  trafficLayer.setMap(map);
+    if (layers == 1) {
+
+        transit.setMap(null);
+        traffic.setMap(null);
+        bike.setMap(null);
+        layers = 0;
+
+    } else {
+        
+        transit.setMap(map);
+        traffic.setMap(map);
+        bike.setMap(map);
+        layers = 1;
+    }
 }
