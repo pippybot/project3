@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         updateslideshowImages();
     });
 
-    function updateImage() {
+    function updateslideshowImages() {
         imageElement.src = slideshowImages[currentIndex];
     }
 });
