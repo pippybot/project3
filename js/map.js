@@ -74,33 +74,41 @@ function changeLocation() {
 
 
 
+// Creating the Info button for each marker/place
+var infoButton = document.createElement("button");
 
-// Defining Buttons
-function createButton() {
-    var btn = document.createElement("button"); // Creating the button
-    btn.id = id
-    btn.innerHTML = "Information"; // This sets the button text (this will be for Rowe Village)
-    btn.onclick = onClickFunction;
-    return btn;
-}
+// Setting the text for the button
+button.innerText = "Information";
 
-function setUpButtons() {
-    var container = document.getElementById("buttonContainer");
+// Attaching the event listener to the button
+button.addEventListener("click", function() {
+});
 
-    // Creating the Info button for each marker/place
-    // First set of info is for Rowe Village
-    var infoButton = createButton("infoButton", "Show Alert", function() {
-        alert("This is the dorm that I stayed in when I was living on campus during the Fall 2023 semester!");
-    });
-
-    
+// Doing the same thing that we did for the markers and location changes, we can do here for the information
+function changeInformation() {
+    let newInfo;
+    // Checking what location we are on to make sure that the correct info pops up (this is for dorm)
+    if (map.getCenter().lat() == locationDorm.lat && map.getCenter().lng() == locationDorm.lng) {
+        // If we ARE at dorm, then the dorm info now alerts
+        alert("This is the dorm I stayed at when I lived on campus in the Fall 2023 semester!");
+    }
+    // Checking if we are on UK
+    else if (map.getCenter().lat() == locationUK.lat && map.getCenter().lng() == locationUK.lng) {
+        // If we ARE at UK, then the UK info now alerts
+        alert("I went to the UK in the summer of 2023 with my brother and my grandmother. It was the first time I had ever been on a plane or out of the country!")
+    }
+    // Checking if we are on Fort Worth
+    else if (map.getCenter().lat() == locationFW.lat && map.getCenter().lng() == locationFW.lng) {
+        // If we ARE at FW, then the FW info now alerts
+        alert("For my birthday this year (2024), I am going to a big gaming event being held at Dikcies Arena for a game I play called 'Rocket League'!")
+    }    
 }
     
 
 // Defining the layers
 function layers() {
   const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 13,
+    zoom: 17,
     center: { lat: 34.04924594193164, lng: -118.24104309082031 },
   });
   const trafficLayer = new google.maps.TrafficLayer();
