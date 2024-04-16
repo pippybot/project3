@@ -78,7 +78,7 @@ function changeLocation() {
 var infoButton = document.createElement("button");
 
 // Setting the text for the button
-button.innerText = "Information";
+infoButton.innerText = "Information";
 
 // Attaching the event listener to the button
 button.addEventListener("click", function() {
