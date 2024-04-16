@@ -26,6 +26,16 @@ function changeLocation() {
    // Defining coordinates
    const newLocation = {lat: 55.391223530439646, lng: -2.591264406992628};
 
+    new google.maps.Marker({
+        position: {lat: 55.391223530439646, lng: -2.591264406992628},
+        map,
+        animation: google.maps.Animation.BOUNCE,
+        icon: {
+            url: 'images/lokiHype.PNG',
+            scaledSize: new google.maps.Size(50,50)
+        }
+    });
+
     //Set  map's  center to new  location
     map.setCenter(newLocation);
 }
@@ -33,7 +43,17 @@ function changeLocation() {
     // Marker added for FortWorth
     function changeLocation() {
         // Defining coordinates
-        const newLocation = {lat: 32.74120577120599, lng: -97.36894587494513}; 
+        const newLocation = {lat: 32.74120577120599, lng: -97.36894587494513};
+        
+        new google.maps.Marker({
+        position: {lat: 32.74120577120599, lng: -97.36894587494513},
+        map,
+        animation: google.maps.Animation.BOUNCE,
+        icon: {
+            url: 'images/lokiHype.PNG',
+            scaledSize: new google.maps.Size(50,50)
+        }
+    });
 
     //Set  map's  center to new  location
     map.setCenter(newLocation);
