@@ -22,6 +22,7 @@ function initMap() {
 }
 
 // Defining coordinates for each location (location 2 is UK and location 3 is Fort Worth)
+const locationDorm = {lat: 41.83409469359984, lng: -87.62625439108541};
 const locationUK = {lat: 55.954184778757956, lng: -3.1867993233814462};
 const locationFW = {lat: 32.74120577120599, lng: -97.36894587494513};
 
@@ -29,17 +30,17 @@ const locationFW = {lat: 32.74120577120599, lng: -97.36894587494513};
 function changeLocation() {
     let newLocation;
     // Checking if the center of map is at one of locations (location dorm) here
-    if (map.center.lat == 41.83409469359984 && map.center.lng == -87.62625439108541) {
+    if (map.center.lat == locationDorm && map.center.lng == locationDorm) {
         // If yes, set newLocation to locationUK
-        newLocation = { lat: 55.954184778757956, lng: -3.1867993233814462 };
+        newLocation = { lat: locationUK, lng: locationUK };
     }
     // If no (else), we are at locationUK, set newLocation to location 3 (Fort Worth)
-    else if (map.center.lat == 55.954184778757956 && map.center.lng == -3.1867993233814462) {
-        newLocation = { lat: 32.74120577120599, lng: -97.36894587494513 };
+    else if (map.center.lat == locationUK && map.center.lng == locationUK) {
+        newLocation = { lat: locationFW, lng: locationFW };
     }
     // If at FW, go to location 1 (dorm)
     else {
-        newLocation = { lat: 41.83409469359984, lng: -87.62625439108541 };
+        newLocation = { lat: locationDorm, lng: locationDorm };
     }
     // Set map center to new location
     map.setCenter(newLocation);
