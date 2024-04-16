@@ -91,5 +91,8 @@ function showLayers() {
         bike.setMap(map);
         layers = 1;
     }
+    
+    // Add an event listener to the change location button
+    document.getElementById('showLayerButton').addEventListener('click', showLayers);
 }
 
