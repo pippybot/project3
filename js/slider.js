@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     nextBtn.addEventListener('click', function() {
         currentIndex++;
-        if (currentIndex >= images.length) {
+        if (currentIndex >= slideshowImages.length) {
             currentIndex = 0;
         }
         updateslideshowImages();
