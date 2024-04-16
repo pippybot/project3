@@ -159,12 +159,14 @@ ul li {
 }
 
 .slideshow {
-	flex: 1;
+	text-align: center;
+    	margin-top: 20px;
 }
 
 .slideshow-images {
-	display: flex;
-	justify-content: center;
+	max-width: 100%;
+    	height: auto;
+    	display: block; /* to avoid bottom margin/gap */
 }
 
 .slideshow-images img {
@@ -176,8 +178,11 @@ ul li {
 	height: auto;
 }
 
-#prevBtn:hover, #nextBtn:hover {
-	background-color: #CCCCFF;
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 
