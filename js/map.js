@@ -3,7 +3,7 @@ var map;
 function initMap() {
     map = new google.maps.Map(document.getElementById('googleMap'), {
         center: {lat: 41.83409469359984, lng: -87.62625439108541}, 
-        zoom: 25,
+        zoom: 17,
         mapID: 'Rowe_Village_ID',
     });
     
