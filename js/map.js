@@ -30,17 +30,17 @@ const locationFW = {lat: 32.74120577120599, lng: -97.36894587494513};
 function changeLocation() {
     let newLocation;
     // Checking if the center of map is at one of locations (location dorm) here
-    if (map.getCenter().lat() == locationDorm && map.getCenter().lng() == locationDorm) {
+    if (map.getCenter().lat() == locationDorm.lat && map.getCenter().lng() == locationDorm.lng) {
         // If yes, set newLocation to locationUK
-        newLocation = { lat: locationUK, lng: locationUK };
+        newLocation = locationUK;
     }
     // If no (else), we are at locationUK, set newLocation to location 3 (Fort Worth)
-    else if (map.getCenter().lat() == locationUK && map.getCenter().lng() == locationUK) {
-        newLocation = { lat: locationFW, lng: locationFW };
+    else if (map.getCenter().lat() == locationUK.lat && map.getCenter().lng() == locationUK.lng) {
+        newLocation = locationFW;
     }
     // If at FW, go to location 1 (dorm)
     else {
-        newLocation = { lat: locationDorm, lng: locationDorm };
+        newLocation = { lat: 41.83409469359984, lng: -87.62625439108541 };
     }
     // Set map center to new location
     map.setCenter(newLocation);
