@@ -24,10 +24,10 @@ function initMap() {
 // Marker added for UK 
 function changeLocation() {
    // Defining coordinates
-   const newLocation = {lat: 55.391223530439646, lng: -2.591264406992628};
+   const newLocation = {lat: 55.954184778757956, lng: -3.1867993233814462};  
 
     new google.maps.Marker({
-        position: {lat: 55.391223530439646, lng: -2.591264406992628},
+        position: {lat: 55.954184778757956, lng: -3.1867993233814462},
         map,
         animation: google.maps.Animation.BOUNCE,
         icon: {
