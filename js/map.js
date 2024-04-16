@@ -39,6 +39,26 @@ function changeLocation() {
     map.setCenter(newLocation);
 }
 
+// Defining Buttons
+function createButton() {
+    var btn = document.createElement("button"); // Creating the button
+    btn.id = id
+    btn.innerHTML = "Information"; // This sets the button text (this will be for Rowe Village)
+    btn.onclick = onClickFunction;
+    return btn;
+}
+
+function setUpButtons() {
+    var container = document.getElementById("buttonContainer");
+
+    // Creating the Info button for each marker/place
+    // First set of info is for Rowe Village
+    var infoButton = createButton("infoButton", "Show Alert", function() {
+        alert("This is the dorm that I stayed in when I was living on campus during the Fall 2023 semester!");
+    });
+    
+    
+
 // Defining the layers
 function layers() {
   const map = new google.maps.Map(document.getElementById("map"), {
