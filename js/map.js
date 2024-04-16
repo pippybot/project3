@@ -31,15 +31,15 @@ function changeLocation() {
     // Checking if the center of map is at one of locations (location dorm) here
     if (map.center.lat == 41.83409469359984 && map.center.lng == -87.62625439108541) {
         // If yes, set newLocation to locationUK
-        newLocation == { lat: 55.954184778757956, lng: -3.1867993233814462 };
+        newLocation = { lat: 55.954184778757956, lng: -3.1867993233814462 };
     }
     // If no (else), we are at locationUK, set newLocation to location 3 (Fort Worth)
     else if (map.center.lat == 55.954184778757956 && map.center.lng == -3.1867993233814462) {
-        newLocation == { lat: 32.74120577120599, lng: -97.36894587494513 };
+        newLocation = { lat: 32.74120577120599, lng: -97.36894587494513 };
     }
     // If at FW, go to location 1 (dorm)
-    else (map.center.lat == 32.74120577120599 && map.center.lng == -97.36894587494513) {
-        newLocation == { lat: 41.83409469359984, lng: -87.62625439108541 };
+    else {
+        newLocation = { lat: 41.83409469359984, lng: -87.62625439108541 };
     }
     // Set map center to new location
     map.setCenter(newLocation);
