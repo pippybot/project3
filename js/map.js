@@ -1,7 +1,7 @@
 var map;
 
 function initMap() {
-    map = new google.maps.Map(document.getElementById('googleMap'), {
+    dorm = new google.maps.Map(document.getElementById('googleMap'), {
         center: {lat: 41.83409469359984, lng: -87.62625439108541}, 
         zoom: 17,
         mapID: 'Rowe_Village_ID',
@@ -9,7 +9,39 @@ function initMap() {
     
     new google.maps.Marker({
         position: {lat: 41.83409469359984, lng: -87.62625439108541},
-        map,
+        dorm,
+        animation: google.maps.Animation.BOUNCE,
+        icon: {
+            url: 'images/lokiHype.PNG',
+            scaledSize: new google.maps.Size(50,50)
+        }
+    });
+
+    UK = new google.maps.Map(document.getElementById('googleMap'), {
+        center: {lat: 55.954184778757956, lng: -3.1867993233814462},
+        zoom: 17;
+        mapId: 'UK_ID',
+    });
+
+    new google.maps.Marker({
+        position: {lat: 55.954184778757956, lng: -3.1867993233814462};
+        UK,
+        animation: google.maps.Animation.BOUNCE,
+        icon: {
+            url: 'images/lokiHype.PNG',
+            scaledSize: new google.maps.Size(50,50)
+        }
+    });
+
+    FW = new google.maps.Map(document.getElementById('googleMap'), {
+        center: {lat: 32.74120577120599, lng: -97.36894587494513},
+        zoom: 17,
+        mapID: 'FortWorth_ID',
+    });
+
+    new google.maps.Marker({
+        position: {lat: 32.74120577120599, lng: -97.36894587494513},
+        FW,
         animation: google.maps.Animation.BOUNCE,
         icon: {
             url: 'images/lokiHype.PNG',
