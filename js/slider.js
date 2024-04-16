@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const slideshow = ['images/NerdyHallows.jpg', 'images/halfsleeve.jpg'];
+    const slideshowImages = ['images/NerdyHallows.jpg', 'images/halfsleeve.jpg'];
     let currentIndex = 0;
 
     const imageElement = document.getElementById('slider-image');
@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
     prevBtn.addEventListener('click', function() {
         currentIndex--;
         if (currentIndex < 0) {
-            currentIndex = slideshow.length - 1;
+            currentIndex = slideshowImages.length - 1;
         }
-        updateSlideshow();
+        updateslideshowImages();
     });
 
     nextBtn.addEventListener('click', function() {
