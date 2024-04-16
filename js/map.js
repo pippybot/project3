@@ -56,7 +56,7 @@ function setUpButtons() {
     var infoButton = createButton("infoButton", "Show Alert", function() {
         alert("This is the dorm that I stayed in when I was living on campus during the Fall 2023 semester!");
     });
-    
+}
     
 
 // Defining the layers
