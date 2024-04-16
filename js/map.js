@@ -22,9 +22,9 @@ function initMap() {
 }
 
 // Marker added for UK 
-function changeLocation() {
+function changeLocationUK() {
    // Defining coordinates
-   const newLocationUK = {lat: 55.954184778757956, lng: -3.1867993233814462};  
+   const newLocation = {lat: 55.954184778757956, lng: -3.1867993233814462};  
 
     new google.maps.Marker({
         position: {lat: 55.954184778757956, lng: -3.1867993233814462},
@@ -37,13 +37,13 @@ function changeLocation() {
     });
 
     //Set  map's  center to new  location
-    map.setCenter(newLocationUK);
+    map.setCenter(newLocation);
 }
  
     // Marker added for FortWorth
-    function changeLocation() {
+    function changeLocationFW() {
         // Defining coordinates
-        const newLocationFW = {lat: 32.74120577120599, lng: -97.36894587494513};
+        const newLocation = {lat: 32.74120577120599, lng: -97.36894587494513};
         
         new google.maps.Marker({
         position: {lat: 32.74120577120599, lng: -97.36894587494513},
@@ -56,7 +56,7 @@ function changeLocation() {
     });
 
     //Set  map's  center to new  location
-    map.setCenter(newLocationFW);
+    map.setCenter(newLocation);
 }
 
 // Defining Buttons
