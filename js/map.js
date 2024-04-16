@@ -22,7 +22,7 @@ function initMap() {
 }
 
 // Marker added for UK 
-function changeLocationUK() {
+function changeLocation() {
    // Defining coordinates
    const newLocation = {lat: 55.954184778757956, lng: -3.1867993233814462};  
 
@@ -41,7 +41,7 @@ function changeLocationUK() {
 }
  
     // Marker added for FortWorth
-    function changeLocationFW() {
+    function changeLocation() {
         // Defining coordinates
         const newLocation = {lat: 32.74120577120599, lng: -97.36894587494513};
         
