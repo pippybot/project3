@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
     prevBtn.addEventListener('click', function() {
         currentIndex--;
         if (currentIndex < 0) {
-            currentIndex = images.length - 1;
+            currentIndex = slideshow.length - 1;
         }
-        updateImage();
+        updateSlideshow();
     });
 
     nextBtn.addEventListener('click', function() {
