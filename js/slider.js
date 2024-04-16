@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const slideshowImages = ['images/NerdyHallows.jpg', 'images/halfsleeve.jpg'];
+    const slideshow = ['images/NerdyHallows.jpg', 'images/halfsleeve.jpg'];
     let currentIndex = 0;
 
     const imageElement = document.getElementById('slider-image');
