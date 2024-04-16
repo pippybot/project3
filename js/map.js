@@ -19,7 +19,7 @@ function initMap() {
 
     UK = new google.maps.Map(document.getElementById('googleMap'), {
         center: {lat: 55.954184778757956, lng: -3.1867993233814462},
-        zoom: 17;
+        zoom: 17,
         mapId: 'UK_ID',
     });
 
