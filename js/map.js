@@ -75,15 +75,21 @@ function changeLocation() {
 }
 
 // This is where we undo and redo layers
-function showLayers() {
+// Define the transit layer globally if it needs to be accessible in showLayers function
 const transitLayer = new google.maps.TransitLayer();
 
-  transitLayer.setMap(map);
-
-
-    // Add an event listener to the change layer button
-    document.getElementById('showLayerButton').addEventListener('click', showLayers);
+// This is where we undo and redo layers
+function showLayers() {
+  // Toggle the visibility of the transit layer
+  if (transitLayer.getMap()) {
+    transitLayer.setMap(null);  // Hide the layer if it's currently shown
+  } else {
+    transitLayer.setMap(map);  // Show the layer if it's currently hidden
+  }
 }
+
+// Add an event listener to the change layer button, this should be outside of your showLayers function
+document.getElementById('showLayerButton').addEventListener('click', showLayers);
 
 
 // Creating the Info button for each marker/place
