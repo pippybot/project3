@@ -79,9 +79,9 @@ transitLayer.setMap(map);
 
 // Function to show layers
 function showLayers() {
-    const transitLayer = new google.maps.TransitLayer();
     transitLayer.setMap(map);
 }
+
 
 // Function to display information about a given location
 function changeInformation(location) {
