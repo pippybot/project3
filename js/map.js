@@ -83,7 +83,7 @@ const transitLayer = new google.maps.TransitLayer();
 
     // Add an event listener to the change layer button
     document.getElementById('showLayerButton').addEventListener('click', showLayers);
-
+}
 
 
 // Creating the Info button for each marker/place
