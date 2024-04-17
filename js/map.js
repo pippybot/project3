@@ -76,15 +76,11 @@ function changeLocation() {
 const transitLayer = new google.maps.TransitLayer();
 transitLayer.setMap(map);
 
-// Add an event listener to the change location button
-document.getElementById('showLayerButton').addEventListener('click', showLayers);
-
 // Function to show layers
 function showLayers() {
     // Your code to show layers goes here
     transitLayer.setMap(map);
 }
-
 
 // Function to display information about a given location
 function changeInformation(location) {
@@ -111,7 +107,7 @@ document.getElementById('showInfoButton').addEventListener('click', function() {
 });
 
 document.getElementById('changeLocButton').addEventListener('click', function() {
-    changeInformation('UK');
+    changeLocation(); // Change location when this button is clicked
 });
 
 document.getElementById('showLayerButton').addEventListener('click', function() {
