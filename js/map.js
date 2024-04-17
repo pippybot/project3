@@ -100,7 +100,7 @@ var infoButton = document.createElement("button");
 infoButton.innerText = "Information";
 
 // Attaching the event listener to the button
-button.addEventListener("click", function() {
+infoButton.addEventListener("click", function() {
 });
 
 // Doing the same thing that we did for the markers and location changes, we can do here for the information
