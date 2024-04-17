@@ -150,13 +150,6 @@ ul li {
 	background-color: white;
 }
 
-.tattoos {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-}
-
 .slideshow {
 	text-align: center;
     	margin-top: 20px;
