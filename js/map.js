@@ -1,8 +1,4 @@
 var map;
-var layers = 0;
-var transit;
-var traffic;
-var bike; 
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('googleMap'), {
