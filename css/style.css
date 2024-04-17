@@ -122,7 +122,7 @@ ul li {
 #fun-facts,
 #gaming,
 #tattoos {
-  border: 0.1em black;
+  border: 0.1em solid black;
   margin-top: 1em;
   margin-bottom: 1em;
 }
@@ -148,6 +148,17 @@ ul li {
 	margin-bottom: 1em;
 	font-family: "KBQuietStories", arial, sans-serif;
 	background-color: white;
+}
+
+#tattoos img {
+	max-width: 10px;
+	max-height: 15px;
+	width: auto;
+	height: auto;
+	display: block; /* ensures it takes up its own line if necessary */
+	margin: 0 auto; /* centers the image */
+    	padding: 5px; /* adds some space around the image */
+   	border-radius: 8px; /* optional: rounds the corners */
 }
 
 .slideshow {
