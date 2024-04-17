@@ -107,11 +107,11 @@ function changeInformation() {
     // Checking if we are on UK
     else if (map.getCenter().lat() == locationUK.lat && map.getCenter().lng() == locationUK.lng) {
         // If we ARE at UK, then the UK info now alerts
-        alert("I went to the UK in the summer of 2023 with my brother and my grandmother. It was the first time I had ever been on a plane or out of the country!")
+        alert("I went to the UK in the summer of 2023 with my brother and my grandmother. It was the first time I had ever been on a plane or out of the country!");
     }
     // Checking if we are on Fort Worth
     else if (map.getCenter().lat() == locationFW.lat && map.getCenter().lng() == locationFW.lng) {
         // If we ARE at FW, then the FW info now alerts
-        alert("For my birthday this year (2024), I am going to a big gaming event being held at Dikcies Arena for a game I play called 'Rocket League'!")
+        alert("For my birthday this year (2024), I am going to a big gaming event being held at Dikcies Arena for a game I play called 'Rocket League'!");
     }    
 }
