@@ -73,12 +73,16 @@ function changeLocation() {
 
 // This is where we undo and redo layers
 const transitLayer = new google.maps.TransitLayer();
-
-  transitLayer.setMap(map);
+transitLayer.setMap(map);
 
 // Add an event listener to the change location button
-document.getElementById('showLayerButton').addEventListener('click', Show Layers);
+document.getElementById('showLayerButton').addEventListener('click', showLayers);
 
+// Function to show layers
+function showLayers() {
+    // Your code to show layers goes here
+    transitLayer.setMap(map); // This might be related to showing layers
+}
 
 
 // Creating the Info button for each marker/place
