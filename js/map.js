@@ -72,6 +72,7 @@ function changeLocation() {
 
 
 // This is where we undo and redo layers
+// Declaration of transitLayer
 const transitLayer = new google.maps.TransitLayer();
 transitLayer.setMap(map);
 
@@ -81,7 +82,7 @@ document.getElementById('showLayerButton').addEventListener('click', showLayers)
 // Function to show layers
 function showLayers() {
     // Your code to show layers goes here
-    transitLayer.setMap(map); // This might be related to showing layers
+    transitLayer.setMap(map);
 }
 
 
