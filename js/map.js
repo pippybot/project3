@@ -55,6 +55,8 @@ function initMap() {
     
 }
 
+
+
 // Defining coordinates for each location (location 2 is UK and location 3 is Fort Worth)
 const locationDorm = {lat: 41.83409469359984, lng: -87.62625439108541};
 const locationUK = {lat: 55.954184778757956, lng: -3.1867993233814462};
@@ -107,18 +109,19 @@ function changeInformation(location) {
             // Default case
             alert("Information not available for this location.");
     }
+    
+    // Add event listeners to the buttons
+    // Change location when this button is clicked
+    document.getElementById('showInfoButton').addEventListener('click', function() {
+        changeInformation('dorm');
+    });
+    
+    document.getElementById('changeLocButton').addEventListener('click', function() {
+        changeLocation(); 
+    });
+    
+    document.getElementById('showLayerButton').addEventListener('click', function() {
+        changeInformation('FortWorth');
+    });
+
 }
-
-// Add event listeners to the buttons
-// Change location when this button is clicked
-document.getElementById('showInfoButton').addEventListener('click', function() {
-    changeInformation('dorm');
-});
-
-document.getElementById('changeLocButton').addEventListener('click', function() {
-    changeLocation(); 
-});
-
-document.getElementById('showLayerButton').addEventListener('click', function() {
-    changeInformation('FortWorth');
-});
