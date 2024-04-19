@@ -1,4 +1,6 @@
 var map;
+var transitLayers;
+
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('googleMap'), {
@@ -6,6 +8,7 @@ function initMap() {
         zoom: 17,
         mapID: 'Rowe_Village_ID',
     });
+    
 
     // Marker for Dorm
     new google.maps.Marker({
@@ -29,7 +32,7 @@ function initMap() {
             scaledSize: new google.maps.Size(50,50)
         }
     });
-
+    
     // Marker for Fort Worth
     new google.maps.Marker({
         position: {lat: 32.74120577120599, lng: -97.36894587494513},
@@ -40,9 +43,16 @@ function initMap() {
             scaledSize: new google.maps.Size(50,50)
         }
     });
-
+    
     // Add an event listener to the change location button
     document.getElementById('changeLocButton').addEventListener('click', changeLocation);
+
+    // Declaration of transitLayer
+    layers = new google.maps.TransitLayer();
+
+    // Add an event listener to the change layer button
+    document.getElementById('showLayerButton').addEventListener('click', showLayers);
+    
 }
 
 // Defining coordinates for each location (location 2 is UK and location 3 is Fort Worth)
@@ -71,14 +81,11 @@ function changeLocation() {
 }
 
 
-// Declaration of transitLayer
-const transitLayer = new google.maps.TransitLayer();
-
-// This is where we undo and redo layers
-transitLayer.setMap(map);
 
 // Function to show layers
 function showLayers() {
+    // This is where we undo and redo layers
+    transitLayer.setMap(null);
     transitLayer.setMap(map);
 }
 
@@ -103,12 +110,13 @@ function changeInformation(location) {
 }
 
 // Add event listeners to the buttons
+// Change location when this button is clicked
 document.getElementById('showInfoButton').addEventListener('click', function() {
     changeInformation('dorm');
 });
 
 document.getElementById('changeLocButton').addEventListener('click', function() {
-    changeLocation(); // Change location when this button is clicked
+    changeLocation(); 
 });
 
 document.getElementById('showLayerButton').addEventListener('click', function() {
