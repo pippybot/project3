@@ -73,7 +73,7 @@ nav li a:hover {
 	height: 6em;
 	background-color: black;
 	text-color: white;
-	text-alighn: center;
+	text-align: center;
 	line-height: 6em;
 	margin-left: 3em;
 	margin-right: 3em;
@@ -85,6 +85,7 @@ nav li a:hover {
 
 .button:hover {
 	background-color: #ffffff;
+	text-color: black;
 }
 
 /* Button Section CSS */
@@ -96,19 +97,3 @@ section {
 	margin: 3em auto;
 	max-width: 70rem;
 }
-
-#prevBtn, #nextBtn {
-    width: 12em;
-    height: 6em;
-    background-color: rgb(187, 127, 214);
-    color: white;
-    text-align: center;
-    line-height: 6em;
-    margin-left: 3em;
-    margin-right: 3em;
-    margin-top: 30%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: inline-block;
-    border-radius: 1em;
-  }
