@@ -1,7 +1,6 @@
 var map;
 var transitLayer;
 
-
 function initMap() {
     map = new google.maps.Map(document.getElementById('googleMap'), {
         center: {lat: 41.83409469359984, lng: -87.62625439108541}, 
@@ -46,13 +45,15 @@ function initMap() {
     
     // Add an event listener to the change location button
     document.getElementById('changeLocButton').addEventListener('click', changeLocation);
-
+    
     // Declaration of transitLayer
     transitLayer = new google.maps.TransitLayer();
 
     // Add an event listener to the change layer button
     document.getElementById('showLayerButton').addEventListener('click', showLayers);
     
+    // Add an event listener to show the info about each given location
+    document.getElementById('showInfoButton').addEventListener('click', showCurrentLocationInfo);
 }
 
 
@@ -99,36 +100,34 @@ function showLayers() {
 
 
 
-// Function to display information about a given location
+// Function to display information based on the current center of the map
+function showCurrentLocationInfo() {
+    var center = map.getCenter();
+    if (center.lat().toFixed(6) == 41.834095 && center.lng().toFixed(6) == -87.626254) {
+        changeInformation('dorm');
+    } else if (center.lat().toFixed(6) == 55.954185 && center.lng().toFixed(6) == -3.186799) {
+        changeInformation('UK');
+    } else if (center.lat().toFixed(6) == 32.741206 && center.lng().toFixed(6) == -97.368946) {
+        changeInformation('FortWorth');
+    } else {
+        alert("No specific information available for this location.");
+    }
+}
+
+
+// Function to change the information shown based on location
 function changeInformation(location) {
-    // Display information based on the location
     switch(location) {
         case 'dorm':
             alert("This is the dorm I stayed at when I lived on campus in the Fall 2023 semester!");
             break;
         case 'UK':
-            alert("I went to the UK in the summer of 2023 with my brother and my grandmother. It was the first time I had ever been on a plane or out of the country!");
+            alert("I went to the UK in the Summer of 2023 with my brother and my grandmother. It was the first time I had ever been on a plane or out of the country!");
             break;
         case 'FortWorth':
             alert("For my birthday this year (2024), I am going to a big gaming event being held at Dickies Arena for a game I play called 'Rocket League'!");
             break;
         default:
-            // Default case
             alert("Information not available for this location.");
     }
-    
-    // Add event listeners to the buttons
-    // Change location when this button is clicked
-    document.getElementById('showInfoButton').addEventListener('click', function() {
-        changeInformation('dorm');
-    });
-    
-    document.getElementById('changeLocButton').addEventListener('click', function() {
-        changeLocation(); 
-    });
-    
-    document.getElementById('showLayerButton').addEventListener('click', function() {
-        changeInformation('FortWorth');
-    });
-
 }
