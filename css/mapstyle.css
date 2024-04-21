@@ -99,5 +99,5 @@ section {
 }
 
 #showLayerButton, #changeLocButton, #showInfoButton {
-	color: black;
+	color: black !important;
 }
