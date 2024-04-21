@@ -97,3 +97,7 @@ section {
 	margin: 3em auto;
 	max-width: 70rem;
 }
+
+#showLayerButton, #changeLocButton, #showInfoButton {
+	color: black;
+}
