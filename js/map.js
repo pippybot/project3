@@ -1,5 +1,5 @@
 var map;
-var transitLayers;
+var transitLayer;
 
 
 function initMap() {
@@ -48,7 +48,7 @@ function initMap() {
     document.getElementById('changeLocButton').addEventListener('click', changeLocation);
 
     // Declaration of transitLayer
-    layers = new google.maps.TransitLayer();
+    transitLayer = new google.maps.TransitLayer();
 
     // Add an event listener to the change layer button
     document.getElementById('showLayerButton').addEventListener('click', showLayers);
@@ -87,9 +87,16 @@ function changeLocation() {
 // Function to show layers
 function showLayers() {
     // This is where we undo and redo layers
-    transitLayer.setMap(null);
-    transitLayer.setMap(map);
+    if (transitLayer.getMap()) {
+        // If the layer is currently shown, hide it
+        transitLayer.setMap(null);
+    }
+    else {
+        // If the layer is not shown, display it
+        transitLayer.setMap(map);
+    }
 }
+
 
 
 // Function to display information about a given location
